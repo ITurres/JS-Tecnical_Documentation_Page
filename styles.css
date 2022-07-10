@@ -1,0 +1,210 @@
+:root {
+  --header-color1: yellow; /*VARIABLE declaration*/ /* to be declared inside a selecor and inside a property with: var(--header-color1)*/
+}
+
+/*Variables are often declared in the :root selector.
+ This is the highest level selector in CSS; putting your variables upthere will make them usable everywhere.
+  Add the :root selector to the top of your stylesheet, and move all your variable declarations there.*/
+
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  min-width: 300px;
+}
+
+body {
+  background-color: rgb(243, 243, 243);
+  font-family: Impact, "Arial Narrow Bold", sans-serif;
+  font-size: 16px;
+  color: rgb(17, 17, 17);
+  min-width: 300px;
+}
+
+#navbar {
+  float: left;
+  position: fixed;
+  min-width: 250px;
+  width: 300px;
+  border-right: 3px solid black;
+  height: 100%;
+  background-color: #f0db4f;
+  /* background: linear-gradient(180deg, #F0DB4F, #f0da4fd8, #f0da4fcf, #f0da4fa2, #f0da4f59, #f0da4f00 ); */
+}
+
+#navbar header {
+  padding: 14px;
+  text-align: center;
+  font-weight: 600;
+  background-color: #323330;
+  color: #f0db4f;
+  font-size: 20px;
+}
+
+header span[class] {
+  font-size: 25px;
+  color: #f0db4f;
+}
+
+header span[id] {
+  background-color: #f0db4f;
+  color: #323330;
+  padding: 4px;
+  border-radius: 3px;
+}
+
+#navbar a {
+  display: block;
+  padding: 10px 10px 10px 20px;
+  text-decoration: none;
+  color: rgb(25, 25, 25);
+  border-top: 2px solid black;
+}
+
+#navbar a:last-of-type {
+  border-bottom: 2px solid black;
+}
+
+main {
+  display: block;
+}
+
+#main-doc {
+  position: absolute;
+  margin-left: 340px;
+  margin-right: 40px;
+  padding: 15px;
+  padding-bottom: 40px;
+}
+
+.main-section header {
+  font-size: 25px;
+  padding: 10px;
+  text-align: left;
+  margin-top: 10px;
+  font-weight: 500;
+  font-family: "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
+  background: linear-gradient(
+    90deg,
+    #f0db4f,
+    #f0da4fd8,
+    #f0da4fbd,
+    #f0da4f7e,
+    #f0da4f24,
+    #f0da4f00
+  );
+  /* border-radius: 5px 0 0 5px; remove for now 14-jun-2022*/
+}
+
+.main-section .extra-top-margin {
+  margin-top: 20px;
+}
+
+.main-section p {
+  margin: 20px 0 20px 0;
+  line-height: 1.3rem;
+}
+
+.main-section ul {
+  margin: 20px 20px 20px 0;
+  padding-left: 25px;
+}
+
+.main-section li {
+  font-size: 15px;
+  line-height: 1.5rem;
+  padding-bottom: 15px;
+}
+
+.main-section code {
+  color: #ffffff;
+  background-color: #323330;
+  padding: 20px;
+  margin: 10px;
+  position: relative;
+  display: block;
+  text-align: left;
+  border-radius: 10px;
+}
+
+.main-section .with-margin-bottom {
+  margin-bottom: 25px;
+}
+
+.border {
+  text-align: center;
+  border: 2px solid #f0db4f;
+  margin-top: 40px;
+}
+
+#info-heading {
+  margin: 0 auto;
+  text-align: center;
+  padding: 40px 20px 40px 20px;
+}
+
+#more-info-link {
+  color: #efd73b;
+  text-decoration: none;
+}
+
+#more-info-link:hover {
+  color: #d7bf39;
+}
+
+#more-info-link:active {
+  color: #323330;
+}
+
+/* MEDIA QUERIES*/
+
+@media (max-width: 768px) {
+  #navbar {
+    width: 250px;
+    min-width: 200px;
+    overflow: hidden;
+  }
+
+  #main-doc {
+    margin-left: 270px;
+    margin-right: 20px;
+  }
+
+  .main-section .with-margin-bottom {
+    line-height: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  * {
+    font-size: small;
+  }
+
+  #navbar {
+    width: 150px;
+    min-width: 100px;
+    overflow: hidden;
+  }
+
+  #navbar header {
+    font-size: 95%;
+  }
+
+  #main-doc {
+    margin-left: 160px;
+    margin-right: 10px;
+  }
+
+  .main-section .with-margin-bottom {
+    line-height: 1.2rem;
+  }
+}
